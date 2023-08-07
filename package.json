@@ -1,0 +1,24 @@
+{
+  "name": "sample_node_server",
+  "version": "1.0.0",
+  "description": "nodeApp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "pr": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PranshuRawat/sample_node_server.git"
+  },
+  "author": "pr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PranshuRawat/sample_node_server/issues"
+  },
+  "homepage": "https://github.com/PranshuRawat/sample_node_server#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
