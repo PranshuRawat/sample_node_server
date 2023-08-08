@@ -1,18 +1,17 @@
-const http=require('http')
-const port=3000
+const express = require("express");
 
+const app = express();
 
-const server =http.createServer(function(req,res){
- res.writeHead(200, {"Content-Type": "text/html"});
- res.write("<h1>Hello world, This is Sample </h1>");
- res.end();
-})
+const PORT = 8081;
 
-server.listen(port,function(error){
-if(error){
-    console.log('Something went wrong',error)
-}
-else{
-    console.log('Server is listening on port'+port)
-}
+app.use(express.json());
+
+app.get("/", (req, res)=>{
+    res.status(200).json({
+        message: "Server is up and running sucessfully",
+    });
+});
+
+app.listen(PORT, ()=>{
+    console.log(`Server is up and running at PORT ${PORT}`);
 })
